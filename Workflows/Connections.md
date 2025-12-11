@@ -1,12 +1,12 @@
-<!-- ---
+---
 id: c1bs7wsjfbhb0zipaywqv1
 title: Connection Rework
 desc: ""
-updated: 1658931733078
+updated: 1765424590935
 created: 1654223767390
 currentStep: 0
 totalSteps: 0
---- -->
+---
 # Connections are love, Connections are life.
 
 Currently, many aspects of the flowsheet UI can be considered functional, but less than ideal. This presents a bottleneck in broader access to platform capabilities as the flowsheet is the core interface through which models are defined and broader insights are accessed. There are several areas wherein our current workflows can be improved.
@@ -30,24 +30,24 @@ Because paths are generated ondemand, it is not possible for users to edit them.
 ### How could we solve this?
 With some fun new implementations. Rather than calculating all points in a path everytime, we could calculate the points upon the inital creation of the connection. We can store these points in a new model table (I know, gross, but bear with me). Moving operatations at either end of the connection would update these points as required in a similar fashion to how we handle unit operation movement (ie fully cached during movement with an upate upon being dropped). Movement of operations would update the start/end points and their associated notch for the operation in question, as well as the x/y position of the middle segment point on for the same side and/or its vertical status. We should give the user the ability to select and shift the middle segment. In the case of a vertical middle segment, the user could adjust its x positioning. For horizontal middle segments, the user could adjust y positions. This is similar to how such behaviour is achieved in diagrams.net, as shown in the below figures:
 
->![Horizontal Segment](/Workflows/assets/images/hLineShift.png)
+>![Horizontal Segment](/assets/images/hLineShift.png)
 ---
->![Vertical Segment](/Workflows/assets/images/vLineShift.png)
+>![Vertical Segment](/assets/images/vLineShift.png)
 
 As an additional option, we could also potentially give them the ability to toggle the vertical nature of the middle connection as well, but that's just a bonus extra...
 
 This approach could be a nice way to achieve more user customisation and better general flowsheet layouts without requiring a massive change to our existing implementation or worrying about more challenging features such as adding additional intermediate path points. It might also be useful for achieving better visualisation of path intersections, as we could write some functions to identify potentially intersecting paths based on path coordinates, allowing us to then in turn visualise such cases with standard approaches such as hops or breaks.
 
-![](/Workflows/assets/images/conArc.png)
+![](/assets/images/conArc.png)
 ---
-![](/Workflows/assets/images/conGap.png)
+![](/assets/images/conGap.png)
 
 
 ## Unit operation rotation
 Currently, rotating operations also rotates the connected stream nodes in some instances, messing up the pre-existing layout. This is disgusting and should not happen.
-![](/Workflows/assets/images/nonRotated.png)
+![](/assets/images/nonRotated.png)
 ---
-![](/Workflows/assets/images/rotated.png)
+![](/assets/images/rotated.png)
 
 ## Connection port positioning and ordering
 The status quo implementation of connection ordering is very limited.
@@ -58,4 +58,4 @@ A possible solution to this is as follows:
 - We could have a way of docking the start/end of a connection to available points around the edge of the operation in question. This is shamelessly stolen from diagrams.net
 - Each side could have a set number of possible connection docking points, with number and positioning increasing/decreasing as connections are added in operations such as mixers/splitters
 
-![](/Workflows/assets/images/connectionDocking.png)
+![](/assets/images/connectionDocking.png)

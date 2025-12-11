@@ -22,7 +22,7 @@ commands:
 workspace:
     vaults:
         -
-            fsPath: vault
+            fsPath: Workflows
     journal:
         dailyDomain: daily
         name: journal
