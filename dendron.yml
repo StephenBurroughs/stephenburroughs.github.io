@@ -91,8 +91,8 @@ publishing:
     siteHierarchies:
         - root
     enableSiteLastModified: true
-    siteRootDir: docs
-    siteUrl: https://dendronhq.github.io
+    siteRootDir: Workflows
+    siteUrl: https://stephenburroughs.github.io
     enableFrontmatterTags: true
     enableHashesForFMTags: false
     enableRandomlyColoredTags: true
