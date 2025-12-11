@@ -30,7 +30,7 @@ jobs:
       run: "(test -d .next) && ls .next || echo 'no next file'"
 
     - name: Install dependencies
-      run: npm install
+      run: yarn
 
     - name: Initialize or pull nextjs template
       run: "(test -d .next) && (echo 'updating dendron next...' && cd .next && git reset --hard && git pull && yarn && cd ..) || (echo 'init dendron next' && yarn dendron publish init)"

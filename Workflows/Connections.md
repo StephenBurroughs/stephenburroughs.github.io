@@ -2,7 +2,7 @@
 id: c1bs7wsjfbhb0zipaywqv1
 title: Connection Rework
 desc: ""
-updated: 1765424590935
+updated: 1765425402022
 created: 1654223767390
 currentStep: 0
 totalSteps: 0
@@ -32,7 +32,7 @@ With some fun new implementations. Rather than calculating all points in a path 
 
 >![Horizontal Segment](/assets/images/hLineShift.png)
 ---
->![Vertical Segment](/assets/images/vLineShift.png)
+>![Vertical Segment](/Workflows/assets/images/vLineShift.png)
 
 As an additional option, we could also potentially give them the ability to toggle the vertical nature of the middle connection as well, but that's just a bonus extra...
 
