@@ -1,10 +1,8 @@
 {
     "folders": [
         {
-            "path": "vault"
-        },
-        {
-            "path": "."
+            "path": "Workflows",
+            "name": "Documentation"
         }
     ],
     "settings": {

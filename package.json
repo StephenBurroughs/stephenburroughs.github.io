@@ -1,20 +1,15 @@
 {
-  "name": "template.publish.github-action",
+  "name": "general_documentation",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dendronhq/template.publish.github-action.git"
-  },
-  "author": "Kevin <kevin@dendron.so>",
-  "license": "MIT",
-  "description": "- [View the Demo Website](https://dendronhq.github.io/template.publish.github-action/)",
+  "author": "Stephen",
+  "license": "",
+  "description": "Loosely connectioned documentation for projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "bugs": {
-    "url": "https://github.com/dendronhq/template.publish.github-action/issues"
-  },
-  "homepage": "https://github.com/dendronhq/template.publish.github-action#readme"
+  "dependencies": {
+    "@dendronhq/dendron-cli": "0.106.0"
+  }
 }

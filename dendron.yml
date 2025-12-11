@@ -1,6 +1,7 @@
 version: 5
 dev:
     enablePreviewV2: true
+    # enableSelfContainedVaults: true
 commands:
     lookup:
         note:
@@ -10,8 +11,6 @@ commands:
             bubbleUpCreateNew: true
             fuzzThreshold: 0.2
             vaultSelectionModeOnCreate: smart
-    insertNote:
-        initialValue: templates
     insertNoteLink:
         aliasMode: none
         enableMultiSelect: false
@@ -23,6 +22,8 @@ workspace:
     vaults:
         -
             fsPath: Workflows
+            # selfContained: true
+            # name: Documentation
     journal:
         dailyDomain: daily
         name: journal
